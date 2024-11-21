@@ -26,17 +26,17 @@ This repository contains implementations of various digital image processing tec
 - Power-Law Transformations
 - Piecewise-Linear Transformation Functions
 
-![form1](/form1.gif)
+![form1](/media/form1.gif)
 
 ### Form 2: Bit-Plane Slicing
 
-![form2](/form2.gif)
+![form2](/media/form2.gif)
 
 ### Form 3: Arithmetic Operations
 
 - Subtraction
 
-![form3](/form3.gif)
+![form3](/media/form3.gif)
 
 ### Form 4: Logical Operations
 
@@ -44,7 +44,7 @@ This repository contains implementations of various digital image processing tec
 - OR
 - XOR
 
-![form4](/form4.gif)
+![form4](/media/form4.gif)
 
 ## Requirements
 
