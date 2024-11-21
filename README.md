@@ -17,15 +17,34 @@ This repository contains implementations of various digital image processing tec
    - OR
    - XOR
 
+## Examples
+
+### Form 1: Intensity Transformations
+
+- Image Negative
+- Log Transformations
+- Power-Law Transformations
+- Piecewise-Linear Transformation Functions
+  ![form1](/form1.gif)
+
+### Form 2: Bit-Plane Slicing
+
+![form2](/form2.gif)
+
+### Form 3: Arithmetic Operations
+
+- Subtraction
+  ![form3](/form3.gif)
+
+### Form 4: Logical Operations
+
+- AND
+- OR
+- XORns
+  ![form4](/form4.gif)
+
 ## Requirements
 
 - Python 3.7 or higher
 - OpenCV
 - NumPy
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/digital-image-processing.git
-   ```
