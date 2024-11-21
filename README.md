@@ -34,14 +34,16 @@ This repository contains implementations of various digital image processing tec
 ### Form 3: Arithmetic Operations
 
 - Subtraction
-  ![form3](/form3.gif)
+
+![form3](/form3.gif)
 
 ### Form 4: Logical Operations
 
 - AND
 - OR
-- XORns
-  ![form4](/form4.gif)
+- XOR
+
+![form4](/form4.gif)
 
 ## Requirements
 
