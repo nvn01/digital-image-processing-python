@@ -14,19 +14,19 @@ def upload_image():
     height, width = img.shape[:2]
     scale = min(400 / width, 400 / height)
     new_size = (int(width * scale), int(height * scale))
-    img_resized = cv2.resize(img, new_size)  # Mengubah ukuran gambar agar tidak terlalu besar
+    img_resized = cv2.resize(img, new_size)  
     img_display = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(img_resized, cv2.COLOR_BGR2RGB)))
     image_label.config(image=img_display, text="Original Image")
     image_label.image = img_display
 
-# Fungsi untuk menghasilkan gambar negatif
+
 def image_negative():
     negative_img = 255 - img_gray
     negative_img_display = ImageTk.PhotoImage(Image.fromarray(negative_img))
     image_label.config(image=negative_img_display, text="Image Negative")
     image_label.image = negative_img_display
 
-# Fungsi untuk melakukan Log Transformation
+
 def log_transformation():
     c = 255 / np.log(1 + np.max(img_gray))
     log_img = c * (np.log(img_gray + 1))
@@ -35,15 +35,15 @@ def log_transformation():
     image_label.config(image=log_img_display, text="Log Transformation")
     image_label.image = log_img_display
 
-# Fungsi untuk melakukan Power-Law Transformations (Gamma Correction)
+
 def power_law_transformation():
-    gamma = 2.0  # Anda bisa mengubah nilai gamma sesuai kebutuhan
+    gamma = 2.0  
     power_img = np.array(255 * (img_gray / 255) ** gamma, dtype='uint8')
     power_img_display = ImageTk.PhotoImage(Image.fromarray(power_img))
     image_label.config(image=power_img_display, text="Power-Law Transformation (Gamma Correction)")
     image_label.image = power_img_display
 
-# Fungsi untuk Piecewise-Linear Transformation
+
 def piecewise_linear_transformation():
     r1, s1 = 70, 0
     r2, s2 = 140, 255
@@ -57,20 +57,20 @@ def piecewise_linear_transformation():
     image_label.config(image=piecewise_img_display, text="Piecewise-Linear Transformation")
     image_label.image = piecewise_img_display
 
-# Inisialisasi Tkinter
+
 root = tk.Tk()
 root.title("Digital Image Processing - Form 1")
 
-# Label untuk menampilkan gambar
+
 image_label = Label(root, text="", font=("Helvetica", 16))
 image_label.pack()
 
-# Frame untuk menampung tombol agar sejajar
+
 button_frame = Frame(root)
 button_frame.pack()
 
 # Tombol untuk mengunggah gambar
-upload_button = Button(button_frame, text="Upload Gambar", command=upload_image)
+upload_button = Button(button_frame, text="Upload Image", command=upload_image)
 upload_button.grid(row=0, column=0, padx=5, pady=5)
 
 # Tombol untuk Image Negative

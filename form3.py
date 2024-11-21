@@ -5,7 +5,7 @@ from tkinter import filedialog
 from tkinter import Label, Button, Frame
 from PIL import Image, ImageTk
 
-# Fungsi untuk memuat gambar dari explorer
+
 def upload_image():
     global img, img_display, img_gray
     file_path = filedialog.askopenfilename()
@@ -19,12 +19,12 @@ def upload_image():
     image_label.config(image=img_display, text="Original Image")
     image_label.image = img_display
 
-# Fungsi untuk Operasi Aritmatika (Subtraction)
+
 def subtraction():
     global img
     if img is None:
         return
-    # Membuat gambar lain untuk dikurangi (contohnya, gambar grayscale seragam)
+
     subtract_img = np.full_like(img, 128)
     subtracted_img = cv2.subtract(img, subtract_img)
     subtracted_img_resized = cv2.resize(subtracted_img, (img_display.width(), img_display.height()))
@@ -45,7 +45,7 @@ button_frame = Frame(root)
 button_frame.pack()
 
 # Tombol untuk mengunggah gambar
-upload_button = Button(button_frame, text="Upload Gambar", command=upload_image)
+upload_button = Button(button_frame, text="Upload Image", command=upload_image)
 upload_button.grid(row=0, column=0, padx=5, pady=5)
 
 # Tombol untuk Operasi Aritmatika (Subtraction)
