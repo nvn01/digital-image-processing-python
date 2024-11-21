@@ -25,7 +25,8 @@ This repository contains implementations of various digital image processing tec
 - Log Transformations
 - Power-Law Transformations
 - Piecewise-Linear Transformation Functions
-  ![form1](/form1.gif)
+
+![form1](/form1.gif)
 
 ### Form 2: Bit-Plane Slicing
 
